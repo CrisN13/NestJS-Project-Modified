@@ -15,8 +15,8 @@ export class TasksService {
   ) {}
   //private tasks: Task[] = [];
 
-  getTasks(filterDto: GetTasksFilterDto): Promise<Task[]> {
-    return this.tasksRepository.getTasks(filterDto);
+  getTasks(filterDto: GetTasksFilterDto, user: User): Promise<Task[]> {
+    return this.tasksRepository.getTasks(filterDto, user);
   }
 
   // getAllTasks(): Task[] {
